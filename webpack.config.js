@@ -1,8 +1,5 @@
 const path = require('path');
-
-//plugin stuff
 const webpack = require("webpack");
-
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 
@@ -21,7 +18,7 @@ module.exports = {
     module: {
         rules: [
           {
-            test: /\.jpg$/,
+            test: /\.(png|jpe?g|gif)$/i,
             use: [
               {
                 loader: 'file-loader',
